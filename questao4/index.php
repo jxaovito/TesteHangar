@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
@@ -6,9 +7,9 @@
 </head>
 <body>
     <?php
-    require 'resposta_2.php';
+    require 'resposta_4.php';
 
-    // var_dump($pdo);
+    var_dump($pdo);
 
 ?>
 </body>

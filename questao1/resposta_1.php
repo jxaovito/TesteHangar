@@ -24,6 +24,7 @@ class Nota{
     }
 
     public function calculaMedia(){
+        
        $this->media = ($this->nota1 + $this->nota2 + $this->nota3) / 3 ;
        if($this->media < 5){
         echo 'reprovado';
