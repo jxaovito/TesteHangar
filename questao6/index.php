@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de pedidos</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
     </head>
@@ -21,16 +20,30 @@
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/searchpanes/1.3.1/js/dataTables.searchPanes.min.js"></script>
 
-    
+
 <script>
+   
+
     $(document).ready(function($){
         $('#orders').DataTable({
             "processing": true,
-            "serverSide": true,
-            "ajax": "resposta_6.php"
+            "serverSide": false,
+            "ajax": "resposta_6.php",
+            "bFilter": false,
+            "paging": false,
+            "bSort": false,
+            "page": 1,
+            "pages": 1,
+            "start": 1,
+            "end": 1,
+            "length": 1,
         });
     });
+
+
+    
 </script>
 </body>
 </html>

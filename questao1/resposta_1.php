@@ -1,4 +1,5 @@
 <?php
+    
 
 class Nota{
     private $nota1;
@@ -24,16 +25,18 @@ class Nota{
     }
 
     public function calculaMedia(){
-        
-       $this->media = ($this->nota1 + $this->nota2 + $this->nota3) / 3 ;
-       if($this->media < 5){
-        echo 'reprovado';
+       $this->media = ((int)$this->nota1 + (int)$this->nota2 + (int)$this->nota3) / 3 ;
+       if(empty($this->nota1 or $this->nota2 or $this->nota3)){
+        echo 'Insira todas as três notas para calcular a média';
+       } else if($this->media < 5){
+        echo 'Aluno reprovado';
        } else if($this->media >= 5 and $this->media < 7){
-        echo 'exame';
+        echo 'Aluno ficou em exame';
        } else {
-        echo 'aprovado';
-       }
+        echo 'Aluno aprovado';
+       } 
     }
+
     }
 
 

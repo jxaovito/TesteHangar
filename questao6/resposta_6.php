@@ -9,9 +9,10 @@ $data_request = $_REQUEST;
  $result->execute();
  $rows = $result->fetch(PDO::FETCH_ASSOC);
 
-$query_orders = "SELECT order_id, order_user_id, order_total, order_date FROM orders ORDER BY order_id ASC";
+$query_orders = "SELECT order_id, order_user_id, order_total, order_date FROM orders ORDER BY order_id";
 $result_orders = $pdo->prepare($query_orders);
 $result_orders->execute();
+
 
 while($row_orders = $result_orders->fetch(PDO::FETCH_ASSOC)){
     extract($row_orders);
@@ -25,8 +26,9 @@ while($row_orders = $result_orders->fetch(PDO::FETCH_ASSOC)){
 
 $resultado = [
     // "draw" => intval($data_request['draw']), // cada registro recebe um número como parâmetro
-    "recordsTotal" => intval($rows['lista_orders']), // qntd de registros
+    "recordsTotal" => intval($rows['lista_orders']), // quantidade de registros
     "data" => $dados
+
 
 ];
 
